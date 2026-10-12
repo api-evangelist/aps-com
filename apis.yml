@@ -1,7 +1,7 @@
 aid: aps-com
 name: Arizona Public Service
-description: 'Arizona Public Service is a company surfaced via the API Evangelist harvest backlog (source:
-  energy-gap) and added to the network as a stub for full-pipeline profiling.'
+description: Arizona Public Service (APS) is Arizona's largest electric utility, a subsidiary of Pinnacle
+  West Capital, serving residential and business customers across the state.
 url: https://raw.githubusercontent.com/api-evangelist/aps-com/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:energy-gap
@@ -12,6 +12,9 @@ created: '2026-10-13'
 modified: '2026-10-13'
 tags:
 - Company
+- Energy
+- Utilities
+- Electricity
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +22,23 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aps-com-domain-security.yml
 - type: Website
   url: https://www.aps.com
+- type: Login
+  url: https://www.aps.com/en/Authorization/Login
+- type: Newsroom
+  url: https://www.aps.com/en/About/Our-Company/Newsroom
+- type: PrivacyPolicy
+  url: https://www.aps.com/en/Utility/Regulatory-and-Legal/Privacy-Policy
+x-coverage:
+  state: none
+  reason: no-public-api
+  detail: APS publishes no developer portal, API documentation or machine-readable contract. api.aps.com
+    and developer.aps.com do not resolve; contract discovery across www, build, careers and marketplace
+    found no OpenAPI, AsyncAPI or GraphQL (marketplace.aps.com/mcp answers 403 to every path, opaque).
+    No Green Button Connect My Data program page exists in the sitemap (/Residential/Account/Green-Button
+    404s); customer data access is limited to logged-in usage downloads (Billing-and-Payment/Download-Usage)
+    and EDI bill-file downloads (/en/EDI/EDI-Download-Bill-Files) for business accounts.
+  checked: '2026-10-13'
