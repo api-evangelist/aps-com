@@ -1,27 +1,49 @@
 aid: aps-com
+
 name: Arizona Public Service
+
+image: https://www.aps.com/-/media/APS/APSCOM-Images/About/Sustainability-and-Innovation/APSEmployeesLookingIntoDistanceSolarPanels033x.jpg?sc_lang=en
+
 description: Arizona Public Service (APS) is Arizona's largest electric utility, a subsidiary of Pinnacle
   West Capital, serving residential and business customers across the state.
+
 url: https://raw.githubusercontent.com/api-evangelist/aps-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:energy-gap
-x-tier: stub
+
+x-tier: profiled
+
 x-tier-reason: harvest
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
 - Energy
 - Utilities
 - Electricity
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aps-com-hosts.yml
+- type: Vendors
+  url: vendors/aps-com-vendors.yml
+- type: TermsOfService
+  url: https://www.aps.com/en/Utility/Regulatory-and-Legal/Terms-of-Use
+- type: Support
+  url: https://www.aps.com/en/Utility/Help
 - type: DomainSecurity
   url: security/aps-com-domain-security.yml
 - type: Website
@@ -32,13 +54,28 @@ common:
   url: https://www.aps.com/en/About/Our-Company/Newsroom
 - type: PrivacyPolicy
   url: https://www.aps.com/en/Utility/Regulatory-and-Legal/Privacy-Policy
+
+apis: []
+
 x-coverage:
   state: none
-  reason: no-public-api
-  detail: APS publishes no developer portal, API documentation or machine-readable contract. api.aps.com
-    and developer.aps.com do not resolve; contract discovery across www, build, careers and marketplace
-    found no OpenAPI, AsyncAPI or GraphQL (marketplace.aps.com/mcp answers 403 to every path, opaque).
-    No Green Button Connect My Data program page exists in the sitemap (/Residential/Account/Green-Button
-    404s); customer data access is limited to logged-in usage downloads (Billing-and-Payment/Download-Usage)
-    and EDI bill-file downloads (/en/EDI/EDI-Download-Bill-Files) for business accounts.
+  reason: no-developer-program
+  method: probed
   checked: '2026-10-13'
+  detail: APS publishes no developer portal, API documentation or machine-readable contract. api.aps.com and developer.aps.com
+    do not resolve; contract discovery across www, build, careers and marketplace found no OpenAPI, AsyncAPI or
+    GraphQL (marketplace.aps.com/mcp answers 403 to every path, opaque). No Green Button Connect My Data program
+    page exists in the sitemap (/Residential/Account/Green-Button 404s); customer data access is limited to logged-in
+    usage downloads (Billing-and-Payment/Download-Usage) and EDI bill-file downloads (/en/EDI/EDI-Download-Bill-Files)
+    for business accounts.
+  evidence:
+  - url: https://api.aps.com/
+    status: unresolved
+  - url: https://developer.aps.com/
+    status: unresolved
+  - url: https://www.aps.com/Residential/Account/Green-Button
+    status: 404
+x-enrichment:
+  status: enriched
+  pass: local-v5
+  date: '2026-10-13'

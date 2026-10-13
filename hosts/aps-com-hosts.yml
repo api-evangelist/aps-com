@@ -1,0 +1,81 @@
+generated: '2026-10-13'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 6
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - marketing
+  - other
+  - website
+hosts:
+- host: api.aps.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: aps.com
+  role: api
+  relation: own
+- host: build.aps.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aps.com
+  role: other
+  relation: own
+- host: careers.aps.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aps.com
+  role: other
+  relation: own
+- host: marketplace.aps.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aps.com
+  role: other
+  relation: own
+- host: newsroom.aps.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aps.com
+  role: marketing
+  relation: own
+- host: www.aps.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  - Login
+  - Newsroom
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: aps.com
+  role: website
+  relation: own
